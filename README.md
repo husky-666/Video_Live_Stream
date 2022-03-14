@@ -1,16 +1,16 @@
-##Video_Live_Stream
-一个把视频推流小工具
+<h1>Video_Live_Stream</h1>
+一个视频推流小工具
 
 ----------
 
-##简介
+<h1>简介</h1>
 Video_Live_Stream是在Linux系统下基于python调用ffmpeg实现的简易推流工具，基本功能如下：
 
 * 读取播放列表，按列表顺序循环推流视频至rtmp服务器。
 * 添加了`bilibili直播间弹幕模块`，可接收及发送弹幕。
 * 可通过指令修改`视频播放模式`，结合弹幕模块可以直播间操作播放模式。
 
-##文件结构
+<h1>文件结构</h1>
 Video_Live_Stream
 
 * data
@@ -93,8 +93,9 @@ Video_Live_Stream
 
 ----------
 
-##准备工作
+<h1>准备工作</h1>
 首先把压缩包下载到本地然后解压，做好以下准备。  
+
 1、修改 data/configure.json中的参数。  
 
 * cmd_push存放着push.py需要的ffmpeg命令参数，请按需修改(pipe_input一般不改)。
@@ -133,7 +134,7 @@ sudo apt install screen
 * 修改Cookies中的sessdata、buvid3、bili_jct
 ----------
 
-##使用方法
+<h1>使用方法</h1>
 1、把待播放的视频列表内容复制到playlist/playlist.txt中  
 
 
@@ -169,7 +170,7 @@ python3 send_check.py
 
 键盘按Ctrl+a+c
 
-chat.py
+python3 chat.py
 
 键盘按Ctrl+a+d
 ```
@@ -185,7 +186,7 @@ python3 stop_pipe.py
 
 ----------
 
-##指令说明
+<h1>指令说明</h1>
 可在b站直播间发送弹幕调整播放模式。
 
 * 换碟：本集结束播放
@@ -207,5 +208,5 @@ python3 stop_pipe.py
     * 输入：@#换剧+播放列表名称 ，例如@#换剧playlist_1
 ----------
 
-##问题反馈
-这个工具主要是写来自用的，目前[我的b站直播间](https://live.bilibili.com/2010774)在使用，有什么问题交流的话可以在b站私信我。
+<h1>问题反馈</h1>
+这个工具主要是写来自用的，目前<a href="https://live.bilibili.com/2010774">我的b站直播间</a>在使用，有什么问题交流的话可以在b站私信我。
