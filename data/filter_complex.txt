@@ -1,0 +1,1 @@
+-filter_complex "drawtext=fontfile=../font/msyh.ttc:fontsize=w/40:fontcolor=white:x=0:y=0:bordercolor=black:borderw=4:text='正在播放\:$filename' [name];[name]drawtext=fontfile=../font/msyh.ttc:fontsize=w/40:fontcolor=white:x=0:y=w/40+10:bordercolor=black:borderw=4:text='%{pts\:gmtime\:$jump_start\:%H\\\\\:%M\\\\\:%S} / $Duration'[cache];[0:v][cache]overlay=x=0:y=0"

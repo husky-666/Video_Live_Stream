@@ -1,0 +1,23 @@
+{
+  "cmd_push": {
+    "skip_start": "90", 
+    "skip_end": "110",
+    "vcodec": "-vcodec libx264 -b:v 1500k -s 1024x576",
+    "acodec": "-acodec aac -ar 44.1k -ab 300k",
+    "format": "-f segment -segment_format mpegts -segment_time 8 pipe:%d.ts",
+    "pipe_input": "../pipe/pipe_push"
+  },
+  "cmd_send": {
+    "pipe_output": "../pipe/pipe_push",
+    "rtmp_address": "rtmp://127.0.0.1/live",
+    "logfile": "../log/log.log"
+  },
+  "location_dir": {
+    "data": "../data",
+    "log": "../log",
+    "pipe": "../pipe",
+    "playlist": "../playlist",
+    "video": "../video",
+    "py": "../py"
+  }
+}
