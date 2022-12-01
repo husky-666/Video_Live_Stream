@@ -13,6 +13,9 @@ if __name__ == '__main__':
     # 只处理sys.argv[1]
     if len(sys.argv) == 2:
         arg = sys.argv[1]
+        
+        if "|" in arg or "&" in arg:
+            sys.exit(0)
 
         # 换碟：本集结束播放
         if re.match(r'^@ *换碟 *$', arg) is not None:
