@@ -174,7 +174,10 @@ class RoomCollection(EventTarget):
         """
         for packet in result:
             if packet["packet_type"] == 5:
-                self.dispatchEvent(Event(event_name=packet["data"]["cmd"], data=packet["data"]))
+                if packet["data"]["cmd"].startswith("DANMU_MSG"):
+                    self.dispatchEvent(Event(event_name="DANMU_MSG", data=packet["data"]))
+                else:
+                    self.dispatchEvent(Event(event_name=packet["data"]["cmd"], data=packet["data"]))
             elif packet["packet_type"] == 8:
                 # 认证回应
                 if packet["data"]["code"] == 0:
